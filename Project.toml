@@ -1,0 +1,38 @@
+name = "Exp25_CJH_KC_LocalMultiTrace"
+uuid = "fd4e8658-17a2-46d1-acf0-58d876d6c065"
+authors = ["Kristof Cools <krcools@gmail.com> and contributors"]
+version = "1.0.0-DEV"
+
+[deps]
+BEAST = "bb4162c7-ba94-5a20-af32-d8ec4428bdd1"
+BlockArrays = "8e7c35d0-a365-5155-bbbb-fb81a777f24e"
+CompScienceMeshes = "3e66a162-7b8c-5da0-b8f8-124ecd2c3ae1"
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+DrWatson = "634d3b9d-ee7a-5ddf-bec9-22491ea816e1"
+LiftedMaps = "d22a30c1-52ac-4762-a8c9-5838452405e0"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+Literate = "98b081ad-f1c9-55d3-8b20-4c87d4299306"
+Makeitso = "5616b7aa-48d8-5ba3-83fe-06b58d5edc20"
+NestedUnitRanges = "032820ab-dc03-4b49-91f4-7d58d4da98b3"
+PlotlyDocumenter = "9b90f1cd-2639-4507-8b17-2fbe371ceceb"
+PlotlyJS = "f0f68f2c-4968-5e81-91da-67840de0976a"
+
+[compat]
+BEAST = "2.7.0"
+BlockArrays = "1.6"
+CompScienceMeshes = "0.10.0"
+DataFrames = "1.7.0"
+DrWatson = "2.18.0"
+LinearAlgebra = "1.11.0"
+Literate = "2.20.1"
+Makeitso = "2.0.0"
+NestedUnitRanges = "0.2.1"
+PlotlyDocumenter = "0.2.0"
+PlotlyJS = "0.18.16"
+julia = "1.6.7"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]

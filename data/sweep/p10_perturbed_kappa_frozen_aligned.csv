@@ -1,0 +1,2 @@
+kappa,realization,seed,amplitude,dof,assembly_time_nominal_s,assembly_time_perturbed_s,solve_time_frozen_aligned_s,iters_frozen_aligned,converged_frozen_aligned,trueres_frozen_aligned
+1,1,1001,0.03,4827,0.1057,0.0986,3.1628,9,true,7.073267e-07

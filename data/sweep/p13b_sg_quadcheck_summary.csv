@@ -1,0 +1,2 @@
+quadpts,p,dimS,sg_dofs,iters_plain,converged_plain,iters_IkronP0,converged_IkronP0,trueres_plain,trueres_IkronP0
+7,4,35,42840,279,true,12,true,9.793893e-09,1.007156e-08

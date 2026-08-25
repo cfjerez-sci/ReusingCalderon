@@ -1,0 +1,5 @@
+h,dof,assembly_time_nominal_s,assembly_time_perturbed_s,iters_plain,converged_plain,iters_frozen_aligned,converged_frozen_aligned,iters_fresh,converged_fresh,trueres_plain,trueres_frozen_aligned,trueres_fresh
+0.2,1224,30.21,29.93,168,true,13,true,13,true,9.976530e-09,7.481721e-08,6.619871e-08
+0.15,2292,102.49,98.93,210,true,13,true,12,true,8.459645e-09,1.904446e-08,6.976385e-08
+0.1,4827,0.29,0.24,281,true,13,true,12,true,9.892938e-09,3.564660e-08,5.887419e-08
+0.075,8172,1215.31,1185.65,346,true,13,true,12,true,9.905640e-09,5.427703e-07,5.434544e-07

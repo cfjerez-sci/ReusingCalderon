@@ -1,0 +1,20 @@
+# Makeitso / DrWatson caches (regenerated on demand; can grow to >100 GB)
+data/methods/
+data/problems/
+data/postproc/
+data/figures/
+
+# Julia
+*.jl.cov
+*.jl.mem
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+.vscode/
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.synctex.gz

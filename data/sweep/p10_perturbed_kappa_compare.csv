@@ -1,0 +1,2 @@
+kappa,realization,seed,amplitude,dof,assembly_time_s,solve_time_plain_s,iters_plain,converged_plain,solve_time_calderon_s,iters_calderon,converged_calderon
+1,1,1001,0.03,4827,421.1213,2.0490,275,true,0.6423,9,true

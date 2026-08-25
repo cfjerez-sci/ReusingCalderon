@@ -1,0 +1,5 @@
+p,dimS,sg_dofs,iters_plain,converged_plain,iters_IkronP0,converged_IkronP0,trueres_plain,trueres_IkronP0
+1,4,4896,230,true,12,true,9.990325e-09,2.106399e-09
+2,10,12240,269,true,12,true,9.888851e-09,6.929965e-09
+3,20,24480,276,true,12,true,9.732933e-09,8.065076e-09
+4,35,42840,279,true,12,true,9.793879e-09,1.007159e-08

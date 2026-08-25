@@ -1,0 +1,5 @@
+kappa_solve,kappa_precond,dof,assembly_time_solve_s,assembly_time_precond_s,solve_time_plain_s,iters_plain,converged_plain,solve_time_mismatched_s,iters_mismatched,converged_mismatched,solve_time_fresh_s,iters_fresh,converged_fresh,trueres_plain,trueres_mismatched,trueres_fresh
+4,1,4827,0.1573,0.1923,1.8727,256,true,4.4060,64,true,1.0434,16,true,9.921429e-09,1.451096e-07,5.851650e-08
+1,1,4827,0.0002,0.1200,2.0888,275,true,0.6782,8,true,0.4782,8,true,9.961459e-09,7.041005e-07,7.041005e-07
+2,1,4827,0.3063,0.1200,2.4182,272,true,1.4253,19,true,0.6021,9,true,8.721073e-09,3.562032e-07,5.326399e-07
+8,1,4827,442.8867,0.1200,3.0635,353,true,11.0636,187,true,1.4777,25,true,9.019703e-09,4.438614e-07,4.340363e-08

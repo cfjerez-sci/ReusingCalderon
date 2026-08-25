@@ -1,0 +1,22 @@
+Julia Version 1.11.5
+Commit 760b2e5b739 (2025-04-14 06:53 UTC)
+Build Info:
+  Official https://julialang.org/ release
+Platform Info:
+  OS: macOS (arm64-apple-darwin24.0.0)
+  CPU: 14 × Apple M3 Max
+  WORD_SIZE: 64
+  LLVM: libLLVM-16.0.6 (ORCJIT, apple-m2)
+Threads: 1 default, 0 interactive, 1 GC (on 10 virtual cores)
+Environment:
+  JULIA_EDITOR = code
+  JULIA_VSCODE_REPL = 1
+CPU model: Apple M3 Max
+CPU threads: 10
+RAM GiB: 36.0
+Julia threads: 1
+BLAS threads: 10
+DrWatson v2.19.1
+Makeitso v2.1.1
+CompScienceMeshes v0.10.0
+BEAST v2.8.0
