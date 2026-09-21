@@ -1,0 +1,7 @@
+amplitude,dof,maxdisp_pct,min_triangle_area,valid_mesh,t_Nxy_refresh_s,iters_plain,t_plain_s,converged_plain,trueres_plain,iters_frozen,t_frozen_s,t_per_iter_frozen_s,converged_frozen,trueres_frozen,iters_hybrid,t_hybrid_s,t_per_iter_hybrid_s,converged_hybrid,trueres_hybrid,iters_fresh,t_fresh_s,t_per_iter_fresh_s,converged_fresh,trueres_fresh,reldiff_hybrid_vs_fresh,reldiff_frozen_vs_fresh
+0.03,4827,1.0282,2.110873e-03,true,NaN,-1,NaN,false,NaN,11,3.4674,0.315218,true,5.332022e-07,11,1.5850,0.144087,true,5.332022e-07,10,3.6096,0.360955,true,5.281292e-07,7.430661e-09,7.430661e-09
+0.1,4827,3.4275,2.066424e-03,true,NaN,-1,NaN,false,NaN,11,2.3763,0.216028,true,5.369289e-07,11,0.7534,0.068492,true,5.369289e-07,11,0.5186,0.047149,true,3.981560e-08,6.203875e-08,6.203875e-08
+0.2,4827,6.8549,2.006650e-03,true,NaN,-1,NaN,false,NaN,13,3.3802,0.260016,true,2.220228e-07,13,0.6679,0.051377,true,2.220228e-07,12,0.6307,0.052562,true,5.233303e-08,2.968790e-08,2.968790e-08
+0.3,4827,10.2824,1.951242e-03,true,NaN,-1,NaN,false,NaN,13,3.0650,0.235772,true,3.564660e-08,13,0.8226,0.063278,true,3.564660e-08,12,0.6962,0.058020,true,5.887418e-08,4.291791e-08,4.291791e-08
+0.4,4827,13.7099,1.880452e-03,true,NaN,-1,NaN,false,NaN,14,3.2841,0.234576,true,3.663512e-08,14,0.8214,0.058671,true,3.663512e-08,13,0.6469,0.049760,true,6.816744e-08,4.350605e-08,4.350605e-08
+0.5,4827,17.1373,1.786767e-03,true,NaN,-1,NaN,false,NaN,15,3.0681,0.204541,true,2.814031e-08,15,0.8702,0.058016,true,2.814031e-08,13,0.6447,0.049595,true,7.443931e-08,1.933503e-08,1.933503e-08

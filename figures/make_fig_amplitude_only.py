@@ -6,7 +6,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 base = "../data/sweep"
-out = "fig_amplitude_and_mismatch.pdf"
+out = "fig_amplitude_only.pdf"
 
 # panel (a): amplitude sweep  -- unchanged
 rows = list(csv.DictReader(open(f"{base}/p10_amplitude_sweep_summary.csv")))
@@ -40,35 +40,17 @@ pen = [froz_by_k[k] / fresh_by_k[k] for k in ks_all]
 gap = [float(next(r["rel_resonance_gap"] for r in krows
                   if float(r["kappa_solve"]) == k)) for k in ks_all]
 
-fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10.5, 3.6))
+fig, ax1 = plt.subplots(1, 1, figsize=(10.5, 3.3))
 
 ax1.semilogy(amp, pl, "o-", color="#c62828", label="Plain GMRES")
 ax1.semilogy(amp, fr, "s-", color="#1565c0", label="Calderón, frozen (DOF-aligned)")
 ax1.semilogy(amp, fs, "^-", color="#2e7d32", label="Calderón, freshly assembled")
-ax1.set_xlabel(r"nominal perturbation amplitude $\varepsilon$ (%)")
-ax1.set_ylabel("GMRES iterations (log scale)")
-ax1.set_title(r"(a) Sphere, $\kappa=2$, $h=0.1$", fontsize=10)
-ax1.legend(fontsize=7.5, loc="center right")
+ax1.set_xlabel(r"nominal perturbation amplitude $\varepsilon$ (%)", fontsize=15)
+ax1.set_ylabel("GMRES iterations (log scale)", fontsize=15)
+ax1.set_title(r"Sphere, $\kappa=2$, $h=0.1$", fontsize=15)
+ax1.legend(fontsize=13, loc="center right")
+ax1.tick_params(labelsize=13)
 ax1.grid(alpha=0.3, which="both")
-
-ax2.axvline(0.0, color="0.55", lw=1.0, ls="--", zorder=1)
-ax2.plot(d, pen, "D-", color="#6a4fa3", zorder=3)
-for x, y, g in zip(d, pen, gap):
-    ax2.annotate(f"{y:.1f}×", (x, y), textcoords="offset points",
-                 xytext=(0, 7), ha="center", fontsize=8)
-    if g < 0.05:                       # near-resonant abscissa
-        ax2.annotate(r"$\ast$", (x, y), textcoords="offset points",
-                     xytext=(0, -13), ha="center", fontsize=9,
-                     color="#b35806")
-ax2.set_xticks([-6, -5, -4, -3, -2, -1, 0, 1, 2])
-ax2.set_xlabel(r"$\log_2(\kappa_{\rm solve}/\kappa_{\rm precond})$")
-ax2.set_ylabel("iters(mismatched)/iters(fresh)")
-ax2.set_title("(b) Wavenumber-mismatch penalty", fontsize=10)
-ax2.grid(alpha=0.3)
-lo, hi = ax2.get_ylim()
-ax2.set_ylim(lo, hi + 0.10 * (hi - lo))
-ax2.annotate("matched", (0, ax2.get_ylim()[1]), textcoords="offset points",
-             xytext=(4, -12), fontsize=8, color="0.45", ha="left")
 
 plt.tight_layout()
 plt.savefig(out, dpi=200, bbox_inches="tight")

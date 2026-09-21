@@ -41,14 +41,29 @@ end
 
 include("../methods/EFIE_manual_solves.jl")
 
-h   = 0.3
-κ   = 2.0
+# [CJ-15] h, kappa and the amplitude list are now arguments, so that this
+# flat-face sweep can be run at the same resolution as the corner sweep of
+# scripts/p26_fichera_corner_sweep.jl and serve as its matched control.
+# Defaults reproduce the published run exactly. Output goes to the original
+# file name only at the original h = 0.3; any other h writes to its own
+# file, so the data behind the manuscript's Fichera table cannot be mixed
+# with control runs.
+function argval(flag, default)
+    i = findfirst(==(flag), ARGS)
+    (i === nothing || i == length(ARGS)) && return default
+    return ARGS[i+1]
+end
 
-amplitudes = [0.02, 0.05, 0.10, 0.15]   # absolute bump size (cube half-width = 1)
+h   = parse(Float64, argval("--h", "0.3"))
+κ   = parse(Float64, argval("--kappa", "2.0"))
+
+amplitudes = parse.(Float64, split(argval("--amps", "0.02,0.05,0.10,0.15"), ","))
 
 outdir = projectdir("data", "sweep")
 mkpath(outdir)
-summary_file = joinpath(outdir, "p10_fichera_amplitude_sweep_summary.csv")
+summary_file = joinpath(outdir,
+    h == 0.3 ? "p10_fichera_amplitude_sweep_summary.csv"
+             : "p10_fichera_amplitude_sweep_summary_h$(h).csv")
 if !isfile(summary_file)
     open(summary_file, "w") do io
         println(io, "amplitude,dof,maxdisp,min_triangle_area,valid_mesh,assembly_time_s,solve_time_plain_s,iters_plain,converged_plain,solve_time_frozen_aligned_s,iters_frozen_aligned,converged_frozen_aligned,solve_time_fresh_s,iters_fresh,converged_fresh,trueres_plain,trueres_frozen_aligned,trueres_fresh")

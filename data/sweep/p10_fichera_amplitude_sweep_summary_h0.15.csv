@@ -1,0 +1,5 @@
+amplitude,dof,maxdisp,min_triangle_area,valid_mesh,assembly_time_s,solve_time_plain_s,iters_plain,converged_plain,solve_time_frozen_aligned_s,iters_frozen_aligned,converged_frozen_aligned,solve_time_fresh_s,iters_fresh,converged_fresh,trueres_plain,trueres_frozen_aligned,trueres_fresh
+0.02,4170,0.019995,5.613453e-03,true,464.0193,2.0526,289,true,5.0625,26,true,5.4662,26,true,8.833269e-09,2.624301e-08,2.630572e-08
+0.05,4170,0.049987,5.613453e-03,true,452.2923,1.7365,289,true,4.7654,26,true,1.3589,26,true,8.663063e-09,2.631643e-08,2.596148e-08
+0.1,4170,0.099974,5.613453e-03,true,463.3718,1.5773,289,true,5.1618,26,true,1.4077,26,true,8.698999e-09,2.651109e-08,2.557689e-08
+0.15,4170,0.149961,5.613453e-03,true,479.2884,1.3759,289,true,4.4909,26,true,1.3992,26,true,8.922623e-09,2.683236e-08,2.527812e-08
