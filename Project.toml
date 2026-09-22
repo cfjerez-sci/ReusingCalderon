@@ -1,7 +1,8 @@
-name = "Exp25_CJH_KC_LocalMultiTrace"
-uuid = "fd4e8658-17a2-46d1-acf0-58d876d6c065"
-authors = ["Kristof Cools <krcools@gmail.com> and contributors"]
-version = "1.0.0-DEV"
+name = "ReusingCalderon"
+uuid = "69908c58-5fc1-4bfa-a3ca-2477f3bdc422"
+authors = ["Paul Escapil-Inchauspe <paul.escapil@edu.uai.cl>",
+           "Carlos Jerez-Hanckes <carlosjh@kth.se>"]
+version = "1.0.0"
 
 [deps]
 BEAST = "bb4162c7-ba94-5a20-af32-d8ec4428bdd1"

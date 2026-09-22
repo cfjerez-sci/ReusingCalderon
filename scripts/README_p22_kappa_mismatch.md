@@ -1,6 +1,6 @@
 # Brief for a Claude Code session in the working repo
 
-Start Claude Code in **`/Users/carlosjerez/Dartagnan/DATA/CODES/Julia/Exp25_CJH_KC_LocalMultiTrace.jl`** — the working copy with the 146 GB Makeitso cache, *not* the `ReusingCalderon` publication replica. Paste everything below the rule as the first message.
+Start Claude Code in **`/Users/carlosjerez/Dartagnan/DATA/CODES/Julia/ReusingCalderon.jl`** — the working copy with the 146 GB Makeitso cache, *not* the `ReusingCalderon` publication replica. Paste everything below the rule as the first message.
 
 The driver is already written against the repo's own API — there is nothing to wire. It reuses `make(Sim2.discretization; ...)`, `solve_plain_gmres` and `solve_calderon_gmres` exactly as `scripts/p10_kappa_mismatch_precond_sweep.jl` does. The five files it depends on (`methods/EFIE.jl`, `methods/EFIE_manual_solves.jl`, `problems/p10_perturbed_sphere.jl`, `postproc/shape_perturbation.jl`, `src/…jl`) are byte-identical between the two repos, so it behaves the same in either.
 
