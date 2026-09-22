@@ -4,6 +4,10 @@ data/problems/
 data/postproc/
 data/figures/
 
+# Python
+__pycache__/
+*.pyc
+
 # Julia
 *.jl.cov
 *.jl.mem

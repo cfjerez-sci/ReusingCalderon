@@ -23,8 +23,8 @@ for h in by: by[h].sort(key=lambda r: float(r["amplitude"]))
 
 # paper's existing categorical order (validated: all checks pass), fixed not cycled
 STYLE = {0.1:  ("#c62828", "o", "$h=0.1$ (4827 dof)"),
-         0.15: ("#1565c0", "s", "$h=0.15$ (2298 dof)"),
-         0.2:  ("#2e7d32", "^", "$h=0.2$ (1206 dof)")}
+         0.15: ("#1565c0", "s", "$h=0.15$ (2292 dof)"),
+         0.2:  ("#2e7d32", "^", "$h=0.2$ (1224 dof)")}
 ORDER = [0.1, 0.15, 0.2]
 TICKS = [0.03, 0.1, 0.2, 0.3, 0.4, 0.5]
 LABS  = ["3", "10", "20", "30", "40", "50"]
