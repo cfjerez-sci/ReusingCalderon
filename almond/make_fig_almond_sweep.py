@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Figure B: the amplitude sweep.
 
-(a) GMRES iteration counts against the injectivity certificate eps*sup|DV|,
+(a) GMRES iteration counts against the injectivity screening quantity
+    eps*sup|DV|,
     which is the x-axis Carlos asked for: it is the quantity the perturbation
     theory is written in, it varies sample to sample at a fixed level, and it
     is dimensionless. The realised maximum displacement -- the quantity a
@@ -23,7 +24,10 @@ import matplotlib.pyplot as plt
 CSV = sys.argv[1] if len(sys.argv) > 1 else "p32_almond_sweep_summary.csv"
 OUT = sys.argv[2] if len(sys.argv) > 2 else "fig_almond_sweep.pdf"
 C = {"plain": "#616161", "frozen": "#1565C0", "fresh": "#2E7D32"}
-MK = {"U": "o", "T": "s"}
+# Strategy -> marker shape, case -> fill (filled = U, open = T). Colour is a
+# redundant third channel: SIAM prints in black and white, so identity must
+# never rest on hue alone.
+MK = {"plain": "^", "frozen": "o", "fresh": "s"}
 
 
 def load(path):
@@ -77,19 +81,19 @@ def main():
             sel = [r for r in s if r["has_fresh"]] if lab == "fresh" else s
             if not sel:
                 continue
-            a.scatter([r["cert"] for r in sel], [r[key] for r in sel], s=16,
-                      marker=MK.get(case, "o"),
+            a.scatter([r["cert"] for r in sel], [r[key] for r in sel], s=19,
+                      marker=MK[lab],
                       facecolor=C[lab] if case == "U" else "none",
-                      edgecolor=C[lab], linewidths=1.0,
+                      edgecolor=C[lab], linewidths=0.9,
                       label=f"{lab}, case {case}")
         both = [r for r in s if r["has_fresh"]]
         if both:
             b.scatter([r["cert"] for r in both],
                       [r["iters_frozen"] / r["iters_fresh"] for r in both],
-                      s=18, marker=MK.get(case, "o"),
+                      s=20, marker="D",
                       facecolor="#1565C0" if case == "U" else "none",
-                      edgecolor="#1565C0", linewidths=1.0,
-                      label=f"case {case}")
+                      edgecolor="#1565C0", linewidths=0.9,
+                      label=f"case {case} ({'filled' if case == 'U' else 'open'})")
         fl = [r for r in s if r["flag"]]
         if fl:
             a.scatter([r["cert"] for r in fl], [r["iters_frozen"] for r in fl],
