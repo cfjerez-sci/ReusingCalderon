@@ -12,8 +12,9 @@
 #
 #   min_angle_deg   the smallest interior angle over all triangles
 #   max_aspect      the largest ratio (longest edge)/(2*inradius), which
-#                   is the standard shape-regularity constant: it equals 1
-#                   for an equilateral triangle and diverges for a sliver
+#                   is the standard shape-regularity constant: it equals
+#                   sqrt(3) for an equilateral triangle and diverges for a
+#                   sliver
 #   min_area        kept, so the new columns can be compared against the
 #                   published ones
 #
@@ -59,8 +60,9 @@ amps = parse.(Float64, split(argval("--amps", "0.0,0.02,0.05,0.10,0.15"), ","))
 
 Smallest interior angle (degrees) and the shape-regularity ratio
 (longest edge)/(2*inradius) of the triangle with vertices a, b, c.
-The ratio is 1 for an equilateral triangle and grows without bound as the
-triangle degenerates, in either the sliver or the needle direction.
+The ratio is sqrt(3) for an equilateral triangle (inradius a/(2*sqrt(3)) for
+side a) and grows without bound as the triangle degenerates, in either the
+sliver or the needle direction.
 """
 function tri_quality(a, b, c)
     ea = norm(c .- b); eb = norm(a .- c); ec = norm(b .- a)
