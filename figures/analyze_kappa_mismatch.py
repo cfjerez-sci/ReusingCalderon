@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
 Analysis and figures for the bidirectional wavenumber-mismatch experiment
-(Parts A-D) of "One Calderon Operator to Rule Them All".
+(Parts A-D) of "Freezing Calderon: Robust Preconditioning for Maxwell
+Scattering under Shape Uncertainty".
 
 Consumes the raw CSV written by run_kappa_mismatch.jl and emits:
 

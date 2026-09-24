@@ -86,8 +86,8 @@ Numbering follows the submitted manuscript.
 
 The almond experiment is self-contained and scripted end to end. Shapes are
 drawn from the paper's own admissible class, `T(x) = x + ε V(x)` with `V` a
-vector-valued random field, and **admissibility is certified before a shape is
-drawn**: the amplitude ladder is chosen so that `ε·sup|DV| ≤ 1/2` for every
+vector-valued random field, and **admissibility is screened before a shape is
+constructed**: the amplitude ladder is chosen so that `ε·sup|DV| ≤ 1/2` for every
 field in `fields_index.csv`, which makes the deformation injective. No
 realization is ever rejected, so the reported statistics carry no rejection
 bias. A triangle–triangle intersection test is retained as a check on the
@@ -101,7 +101,7 @@ NFRESH=3 ./scripts/run_almond.sh  # the full campaign, ~8 h on an M3 Max
 `p35_almond_preflight.jl` gates the run: it verifies that both meshes load
 and are consistently oriented, that the requested correlation length exists in
 the exported field index, that the top amplitude satisfies the injectivity
-certificate for **every** field that will be drawn at it, and that the
+screening bound for **every** field that will be drawn at it, and that the
 perturbation applies without disturbing connectivity. The driver then runs the
 amplitude sweep, the correlation-length sensitivity, the 100-sample campaign,
 the λ/20 refinement check, the monostatic sweep, and finally the table and
@@ -117,7 +117,7 @@ cd almond && python export_for_julia.py ../data/almond 4 10   # ℓ = d/4 primar
 ```
 
 `almond/README_almond.md` documents the deformation model, the injectivity
-certificate and the amplitude ladder in full.
+screening bound and the amplitude ladder in full.
 
 `scripts/p23_fingerprints.jl` is the shared edge/vertex-fingerprint and
 permutation module used by the p23–p26 drivers;

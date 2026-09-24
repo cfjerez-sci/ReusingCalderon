@@ -127,7 +127,7 @@ iteration count has median {st.median(fr):.0f} and range {min(fr)}--{max(fr)};
 On the {len(sub)} samples also solved with a freshly assembled preconditioner
 the frozen-to-fresh ratio lies between {min(ratios):.2f} and {max(ratios):.2f}
 (median {st.median(ratios):.2f}). No realization was discarded: admissibility
-is certified in advance, so the sample is the one that was drawn.}}""",
+is screened in advance, so the sample is the one that was drawn.}}""",
           file=OUT)
 
 

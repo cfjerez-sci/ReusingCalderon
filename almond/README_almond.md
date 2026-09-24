@@ -18,15 +18,15 @@ normals. Two consequences matter:
 * `T` is injective on any convex set as soon as `eps * sup|DV|_2 < 1`, and
   `sup|DV|` is computable in closed form. The amplitude ladder is chosen so
   that `eps * sup|DV| <= 0.5` for every sample drawn, i.e. with a factor-two
-  margin. **Validity is certified in advance, so no sample is ever rejected
-  and the Monte Carlo statistics are unbiased by construction.** The
+  margin. **Validity is screened in advance, so no sample is ever rejected
+  and the Monte Carlo statistics carry no rejection bias.** The
   triangle-triangle test is kept as a safety check; a failure is a bug to
   report, not a sample to drop.
 * Case **U** applies `V` as it is, so the sharp tip moves with its
   neighbourhood. Case **T** multiplies `V` by a C^1 cutoff that vanishes
   identically within `d/10` of the tip and rises to 1 over the following
   `d/4`. The `grad chi` term is included in the Jacobian bound, so case T is
-  certified on the field that is actually applied. The two lengths do
+  screened on the field that is actually applied. The two lengths do
   different jobs: `d/10` is the physics ("the tip does not move"), `d/4` is
   the Lipschitz budget, chosen so that the cutoff does not, by itself, cap
   the amplitude below what the field allows.
@@ -143,7 +143,7 @@ Seconds, no assembly, no solves -- it touches only the cached geometry:
 * both meshes load, are consistently oriented, enclose a positive volume and
   give 2673 and 7269 dof;
 * the field index exists and contains the correlation length asked for;
-* the top level's certificate `eps*sup|DV|` is under 0.5 for **every** field
+* the top level's screening value `eps*sup|DV|` is under 0.5 for **every** field
   that will be drawn at it, so a re-export cannot silently push a sample over;
 * the perturbation applies, moves the mesh by what the ladder says, and leaves
   connectivity untouched.
