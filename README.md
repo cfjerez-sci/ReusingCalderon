@@ -134,14 +134,13 @@ DOF-alignment construction described in the implementation section.
   freedom are aligned across geometries via a combinatorial edge-fingerprint
   permutation (see `scripts/p10_investigate_dof_indexing.jl` and the per-node
   permutation in `scripts/p13_sg_prefinement.jl`).
-- The project environment was originally scaffolded from Kristof Cools'
-  MIT-licensed `Exp25_CJH_KC_LocalMultiTrace.jl`. That scaffold has since
-  been replaced: the package is now `ReusingCalderon`, with its own UUID, and
-  `src/` holds no inherited code. `Manifest.toml` is unchanged, so the pinned
-  dependency versions are exactly those the reported runs used. The only
-  remaining dependencies on that author's work are the libraries the
-  experiments are built on, [BEAST.jl](https://github.com/krcools/BEAST.jl)
-  and [CompScienceMeshes.jl](https://github.com/krcools/CompScienceMeshes.jl).
+- The experiments are built on [BEAST.jl](https://github.com/krcools/BEAST.jl)
+  and [CompScienceMeshes.jl](https://github.com/krcools/CompScienceMeshes.jl)
+  by Kristof Cools and contributors, which supply the boundary element
+  assembly and the RWG/BC discretizations these scripts drive. They are used
+  as ordinary MIT-licensed dependencies; no third-party code is redistributed
+  in this repository. `Manifest.toml` is unchanged from the runs reported in
+  the paper, so the pinned dependency versions are exactly those used.
 
 ## License
 
