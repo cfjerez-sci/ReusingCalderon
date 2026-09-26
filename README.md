@@ -52,27 +52,29 @@ grows large).
 
 ## Script → result mapping
 
-Numbering follows the submitted manuscript.
+Numbering follows the manuscript as resubmitted to SISC (September 26, 2026), which
+numbers tables and figures by section; items marked SM are in the Supplementary
+Materials.
 
 | Paper result | Script | Output |
 |---|---|---|
-| Table 1 — per-matrix assembly times (sphere) | `scripts/p10_time_matrix_assembly_components.jl`, `..._amp30.jl` | `p10_matrix_assembly_component_times*.csv` |
-| Table 2 — sphere amplitude sweep (3–50 %) | `scripts/p10_PEC_sphere_perturbation_amplitude_sweep.jl` | `p10_amplitude_sweep_summary.csv` |
-| Table 3 — N=20 random campaign | `scripts/p10_PEC_sphere_perturbation_robustness_v2.jl`, `..._amp30.jl` | `p10_perturbation_summary_v2*.csv` |
-| Table 4 — mesh refinement at fixed perturbation | `scripts/p12_h_refinement_study.jl` | `p12_h_refinement_summary.csv` |
-| Table 5 — stochastic Galerkin p-refinement | `scripts/p13_sg_prefinement.jl` | `p13_sg_prefinement_summary.csv` |
-| Table 6 — bidirectional wavenumber mismatch | `scripts/p22_kappa_mismatch_bidirectional.jl --lowk --detune` | `p22_kappa_mismatch_bidirectional_LOWK.csv` |
-| Table 7 — triaxial ellipsoid sweep | `scripts/p10_ellipsoid_amplitude_sweep.jl` | `p10_ellipsoid_amplitude_sweep_summary.csv` |
-| Table 8 — Fichera corner, perturbation **at** the corner | `scripts/p26_fichera_corner_sweep.jl --h 0.15` | `p26_fichera_corner_sweep_summary.csv` |
-| Table 8 — the θ_min / σ_max mesh-quality columns | `scripts/p30_fichera_mesh_quality.jl` | `p30_fichera_mesh_quality.csv` |
-| Table 9 — per-matrix assembly times (NASA almond) | `scripts/p31_almond_feasibility.jl` | `p31_almond_feasibility.csv` |
-| Table 10 — NASA almond amplitude sweep | `scripts/p32_almond_sweep.jl` | `p32_almond_sweep_summary.csv` |
-| Fig. 1 — transport of the preconditioner | drawn inline in the manuscript (TikZ) | — |
-| Fig. 2 — perturbed meshes, four geometries | `scripts/p11_meshes_and_rcs.jl` + `figures/make_fig_meshes_row4.py` | — |
-| Fig. 3 — direct test of the perturbation estimate | `scripts/p25_perturbation_linearity.jl` + `figures/make_fig_linearity.py` | `p25_perturbation_linearity.csv` |
-| Fig. 4 — NASA almond amplitude sweep | `almond/make_fig_almond_sweep.py` | from `p32_almond_sweep_summary.csv` |
-| Fig. 5 — NASA almond Monte Carlo campaign | `almond/make_fig_almond_campaign.py` | from `p33_almond_campaign_*.csv` |
-| Fig. 6 — bistatic RCS, three geometries | `scripts/p11_meshes_and_rcs.jl` + `figures/make_fig_rcs.py` | — |
+| Table 4.1 — per-matrix assembly times (sphere rows) | `scripts/p10_time_matrix_assembly_components.jl`, `..._amp30.jl` | `p10_matrix_assembly_component_times*.csv` |
+| Table 5.1 — sphere amplitude sweep (3–50 %) | `scripts/p10_PEC_sphere_perturbation_amplitude_sweep.jl` | `p10_amplitude_sweep_summary.csv` |
+| Table 5.2 — N=20 random campaign | `scripts/p10_PEC_sphere_perturbation_robustness_v2.jl`, `..._amp30.jl` | `p10_perturbation_summary_v2*.csv` |
+| Table 5.3 — mesh refinement at fixed perturbation | `scripts/p12_h_refinement_study.jl` | `p12_h_refinement_summary.csv` |
+| Table 5.4 — stochastic Galerkin p-refinement | `scripts/p13_sg_prefinement.jl` | `p13_sg_prefinement_summary.csv` |
+| Table 5.5 — bidirectional wavenumber mismatch | `scripts/p22_kappa_mismatch_bidirectional.jl --lowk --detune` | `p22_kappa_mismatch_bidirectional_LOWK.csv` |
+| Table 5.6 — triaxial ellipsoid sweep | `scripts/p10_ellipsoid_amplitude_sweep.jl` | `p10_ellipsoid_amplitude_sweep_summary.csv` |
+| Table 5.7 — Fichera corner, perturbation **at** the corner | `scripts/p26_fichera_corner_sweep.jl --h 0.15` | `p26_fichera_corner_sweep_summary.csv` |
+| Table 5.7 — the θ_min / σ_max mesh-quality columns | `scripts/p30_fichera_mesh_quality.jl` | `p30_fichera_mesh_quality.csv` |
+| Table 4.1 — per-matrix assembly times (NASA almond row) | `scripts/p31_almond_feasibility.jl` | `p31_almond_feasibility.csv` |
+| Table 5.8 — NASA almond amplitude sweep | `scripts/p32_almond_sweep.jl` | `p32_almond_sweep_summary.csv` |
+| Fig. 3.1 — transport of the preconditioner | drawn inline in the manuscript (TikZ) | — |
+| Fig. 5.1 — perturbed meshes, four geometries | `scripts/p11_meshes_and_rcs.jl` + `figures/make_fig_meshes_row4.py` | — |
+| Fig. 5.2 — direct test of the perturbation estimate | `scripts/p25_perturbation_linearity.jl` + `figures/make_fig_linearity.py` | `p25_perturbation_linearity.csv` |
+| Fig. 5.3 — NASA almond amplitude sweep | `almond/make_fig_almond_sweep.py` | from `p32_almond_sweep_summary.csv` |
+| Fig. 5.4 — NASA almond Monte Carlo campaign | `almond/make_fig_almond_campaign.py` | from `p33_almond_campaign_*.csv` |
+| Fig. SM1 (Supplementary Materials) — bistatic RCS, three geometries | `scripts/p11_meshes_and_rcs.jl` + `figures/make_fig_rcs.py` | — |
 | §5.2 — storage artifact, not conditioning | `scripts/p23_hybrid_precond_sweep.jl` | `p23_hybrid_precond_summary.csv` |
 | §5.2, §3.6 — exactness of the transported RWG–BC pairing | `scripts/p24_nxy_invariance_check.jl` | `p24_log.txt` |
 | §5.6 — higher wavenumber (κ=4) | `scripts/p10_PEC_sphere_perturbation_amplitude_sweep_kappa4.jl` | `p10_amplitude_sweep_summary_kappa4.csv` |
